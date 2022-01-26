@@ -31,32 +31,32 @@ include("0_sleepwalk/lib/keys_encoders")
 include("0_sleepwalk/lib/convenience")
 
 STATE = {
-	active_sequence = 1,
-	selected_sequence = 1,
-	selected_track = 1,
-	selected_step = 1,
-	bpm = 100,
-	is_playing = true,
-	focus = "diagnostic", -- project, project_settings, sequence, sequence_settings, track, trig, track_settings, trig_settings, diagnostic
-	key_1_down = false,
-	key_2_down = false,
-	key_3_down = false,
-	y_scroll = 0,
-	x_scroll = 0,
-	playheads = {},
-	event_queues = {}
+  active_sequence = 1,
+  selected_sequence = 1,
+  selected_track = 1,
+  selected_step = 1,
+  bpm = 100,
+  is_playing = true,
+  focus = "diagnostic", -- project, project_settings, sequence, sequence_settings, track, trig, track_settings, trig_settings, diagnostic
+  key_1_down = false,
+  key_2_down = false,
+  key_3_down = false,
+  y_scroll = 0,
+  x_scroll = 0,
+  playheads = {},
+  event_queues = {}
 }
 
 SCALES = {
-	'chromatic',
-	'dorian', -- etc
+  'chromatic',
+  'dorian', -- etc
 }
 
 function create_project ()
-	local project = {
-		name = "My Project",
-		active_sequence = 1,
-		sequences = {}
-	}
-	return project
+  local project = {
+    name = "My Project",
+    active_sequence = 1,
+    sequences = {}
+  }
+  return project
 end

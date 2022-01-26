@@ -16,7 +16,6 @@ function redraw()
   screen.update()
 end
 
-
 --  views
 
 views = {}
