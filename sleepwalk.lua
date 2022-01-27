@@ -15,3 +15,4 @@ function init ()
   clock.run(screen_loop)
   clock.run(grid_loop)
 end
+

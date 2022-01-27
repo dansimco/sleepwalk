@@ -21,6 +21,7 @@
 --  Lane:       a visible column which shows a particular note prop
 --  Sequence:   a table of tracks, trig lists, and event queues
 
+include("0_sleepwalk/lib/glyph")
 include("0_sleepwalk/lib/engine")
 include("0_sleepwalk/lib/sequence")
 include("0_sleepwalk/lib/track")
@@ -29,6 +30,7 @@ include("0_sleepwalk/lib/grid")
 include("0_sleepwalk/lib/arc")
 include("0_sleepwalk/lib/keys_encoders")
 include("0_sleepwalk/lib/convenience")
+include("0_sleepwalk/lib/keyboard")
 
 STATE = {
   active_sequence = 1,
