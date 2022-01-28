@@ -22,6 +22,7 @@
 --  Sequence:   a table of tracks, trig lists, and event queues
 
 include("0_sleepwalk/lib/glyph")
+include("0_sleepwalk/lib/glyphs_text_small")
 include("0_sleepwalk/lib/engine")
 include("0_sleepwalk/lib/sequence")
 include("0_sleepwalk/lib/track")

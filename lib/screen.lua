@@ -9,10 +9,9 @@
 function screen_loop ()
   while true do
     if STATE.dirty then
-      screen.ping()
       redraw()
     end
-    clock.sleep(1 / 12)
+    clock.sleep(1 / 6)
   end
 end
 
@@ -42,23 +41,29 @@ function redraw()
   screen.clear()
 
   screen.level(2)
-  glyph_string_small("000 --- 000 --- 11 -- 22 -- .99%", 0, 0)
-  glyph_string_small("000 --- 000 --- 11 -- 22 -- .99%", 0, 7)
-  glyph_string_small("000 --- 000 --- 11 -- 22 -- .99%", 0, 14)
-  glyph_string_small("000 --- 000 --- 11 -- 22 -- .99%", 0, 21)
   screen.fill()
-  screen.level(8)
-  glyph_string_small("000 --- 000 --- 11 -- 22 -- .99%", 0, 28)
+
+  for i=0,3 do
+    l = " "
+    if i == 3 then
+      screen.level(10)
+      l = ">"
+    else
+      screen.level(4)
+    end
+    glyph_string_small(l .. "TRACK ".. i+1 ..": D# DORIAN      130bpm", 0, i*8 + 1)
+    screen.fill()
+    screen.level(16)
+    glyph_string("slyypwalk 2022", 4, 45)
+
+    gx, gy = glf("test", 40, 32)
+    glf("test", 40+gx, 32+gy)
+
+    screen.fill()
+  end
+
   screen.fill()
   screen.level(2)
-  glyph_string_small("000 --- 000 --- 11 -- 22 -- .99%", 0, 35)
-  glyph_string_small("000 --- 000 --- 11 -- 22 -- .99%", 0, 42)
-  glyph_string_small("000 --- 000 --- 11 -- 22 -- .99%", 0, 49)
-  glyph_string_small("000 --- 000 --- 11 -- 22 -- .99%", 0, 56)
-  -- glyph_string_small("Track 01 - Crow", 0, 7)
-  screen.fill()
-  screen.level(2)
-  -- glyph_string("ABCDEFGHIJKLMNOPQRST", 0, 20)
 
   screen.update()
 end
